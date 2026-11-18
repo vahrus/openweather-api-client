@@ -1,0 +1,24 @@
+[project]
+name = "openweather-api-client"
+version = "1.0.0"
+description = "Учебный клиент OpenWeatherMap с CLI и Telegram-ботом"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.3",
+    "python-dotenv>=1.0.1",
+    "aiogram>=3.13.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
